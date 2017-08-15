@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://bolg.youngfly.top">
-  <title>Tag: typecho | Young</title>
+  <title>CI框架的页面为何全是空白的 | Young</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Young">
-<meta property="og:url" content="http://bolg.youngfly.top/tags/typecho/index.html">
+  <meta name="description" content="#CI框架的页面为何全是空白的 CI2点几版本的项目，所有页面都是返回200，不过页面都是空白的">
+<meta name="keywords" content="CI">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CI框架的页面为何全是空白的">
+<meta property="og:url" content="http://bolg.youngfly.top/2017/08/14/CI框架的页面为何全是空白的/index.html">
 <meta property="og:site_name" content="Young">
+<meta property="og:description" content="#CI框架的页面为何全是空白的 CI2点几版本的项目，所有页面都是返回200，不过页面都是空白的">
+<meta property="og:updated_time" content="2017-08-15T07:11:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Young">
+<meta name="twitter:title" content="CI框架的页面为何全是空白的">
+<meta name="twitter:description" content="#CI框架的页面为何全是空白的 CI2点几版本的项目，所有页面都是返回200，不过页面都是空白的">
   
     <link rel="alternative" href="/atom.xml" title="Young" type="application/atom+xml">
   
@@ -143,60 +148,190 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-CI框架的页面为何全是空白的" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/08/typecho-plugin/" class="archive-article-date">
-  	<time datetime="2017-02-08T14:22:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/08/typecho-plugin/">typecho plugin</a>
+    <h1 class="article-title" itemprop="name">
+      CI框架的页面为何全是空白的
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/08/14/CI框架的页面为何全是空白的/" class="archive-article-date">
+  	<time datetime="2017-08-14T14:22:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#CI框架的页面为何全是空白的</p>
+<p>CI2点几版本的项目，所有页面都是返回200，不过页面都是空白的<br><a id="more"></a></p>
+<h2 id="第一步，开启所有的报错，包括框架的"><a href="#第一步，开启所有的报错，包括框架的" class="headerlink" title="第一步，开启所有的报错，包括框架的"></a>第一步，开启所有的报错，包括框架的</h2><p>发现没有错误，框架的log里没有。nginx，php的都没有。</p>
+<h2 id="第二步，定位到框架问题"><a href="#第二步，定位到框架问题" class="headerlink" title="第二步，定位到框架问题"></a>第二步，定位到框架问题</h2><p>搜索后得知，CI2 还在使用 php_mysql的模块<br>比如，所以我们没有看到报错<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function db_connect()</div><div class="line">	&#123;</div><div class="line">		if ($this-&gt;port != &apos;&apos;)</div><div class="line">		&#123;</div><div class="line">			$this-&gt;hostname .= &apos;:&apos;.$this-&gt;port;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		return @mysql_connect($this-&gt;hostname, $this-&gt;username, $this-&gt;password, TRUE);</div><div class="line">	&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="得出结论"><a href="#得出结论" class="headerlink" title="得出结论"></a>得出结论</h2><p>因为我安装的php最低版本是php5.6的，brew安装的php5.6已经没有php56-mysql的拓展了，所以CI用不了，导致了悲剧。</p>
+<h2 id="怎么解决"><a href="#怎么解决" class="headerlink" title="怎么解决"></a>怎么解决</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew search php56-mysql</div></pre></td></tr></table></figure>
+<p>是找不到的，只能编译安装了。</p>
+<h3 id="1-官网下载源码"><a href="#1-官网下载源码" class="headerlink" title="1.官网下载源码"></a>1.官网下载源码</h3><p><a href="http://php.net/releases/index.php" target="_blank" rel="external">源码下载地址</a></p>
+<p>注意，选择自己所使用php的版本<code>php -v</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">PHP 5.6.31 (cli) (built: Aug  7 2017 20:28:40)</div><div class="line">Copyright (c) 1997-2016 The PHP Group</div><div class="line">Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies</div></pre></td></tr></table></figure></p>
+<h3 id="2-解压"><a href="#2-解压" class="headerlink" title="2.解压"></a>2.解压</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar zxvf php-5.6.31.tar.gz</div></pre></td></tr></table></figure>
+<h3 id="3-下载并安装Autoconfigure"><a href="#3-下载并安装Autoconfigure" class="headerlink" title="3.下载并安装Autoconfigure"></a>3.下载并安装Autoconfigure</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">curl -O http://ftp.gnu.org/gnu/autoconf/autoconf-latest.tar.gz</div><div class="line">tar xvfz autoconf-latest.tar.gz</div><div class="line">cd autoconf-2.69/</div><div class="line">./configure</div><div class="line">make</div><div class="line">sudo make install</div></pre></td></tr></table></figure>
+<h3 id="4-安装PHP的mysql拓展"><a href="#4-安装PHP的mysql拓展" class="headerlink" title="4.安装PHP的mysql拓展"></a>4.安装PHP的mysql拓展</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cd php-5.6.31/ext/mysql</div><div class="line">phpize</div><div class="line">./configure</div><div class="line">make</div><div class="line">sudo make install</div></pre></td></tr></table></figure>
+<p>这时候在该路径下已经有mysql.so存在了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/local/Cellar/php56/5.6.31_7/lib/php/extensions/no-debug-non-zts-20131226</div></pre></td></tr></table></figure></p>
+<h3 id="5-修改php-ini"><a href="#5-修改php-ini" class="headerlink" title="5.修改php.ini"></a>5.修改php.ini</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /usr/local/etc/php/5.6/conf.d</div><div class="line">sudo vim ext-mysql.ini</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[mysql]</div><div class="line">extension=&quot;/usr/local/Cellar/php56/5.6.31_7/lib/php/extensions/no-debug-non-zts-20131226/mysql.so&quot;</div></pre></td></tr></table></figure>
+<h3 id="最后重启php-fpm即可，发现php-info里已经有mysql拓展了，该CI项目也可以正常访问了"><a href="#最后重启php-fpm即可，发现php-info里已经有mysql拓展了，该CI项目也可以正常访问了" class="headerlink" title="最后重启php-fpm即可，发现php_info里已经有mysql拓展了，该CI项目也可以正常访问了"></a>最后重启php-fpm即可，发现php_info里已经有mysql拓展了，该CI项目也可以正常访问了</h3><p>未完待续,转载请注明原地址，Zhao Jia 的博客：<a href="http://blog.youngfly.top" target="_blank" rel="external">http://blog.youngfly.top</a> 谢谢！</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://raw.githubusercontent.com/youngzhaojia/youngzhaojia.github.io/master/photo/avatar/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://raw.githubusercontent.com/youngzhaojia/youngzhaojia.github.io/master/photo/avatar/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">typecho</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">CI</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://bolg.youngfly.top/2017/08/14/CI框架的页面为何全是空白的/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/07/05/简单索引技巧/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">简单索引技巧</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -219,9 +354,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: false,
