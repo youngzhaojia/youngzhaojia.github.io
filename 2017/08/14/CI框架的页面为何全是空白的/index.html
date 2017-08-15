@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://bolg.youngfly.top">
   <title>CI框架的页面为何全是空白的 | Young</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#CI框架的页面为何全是空白的 CI2点几版本的项目，所有页面都是返回200，不过页面都是空白的">
+  <meta name="description" content="CI框架的页面为何全是空白的CI2点几版本的项目，所有页面都是返回200，不过页面都是空白的">
 <meta name="keywords" content="CI">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CI框架的页面为何全是空白的">
 <meta property="og:url" content="http://bolg.youngfly.top/2017/08/14/CI框架的页面为何全是空白的/index.html">
 <meta property="og:site_name" content="Young">
-<meta property="og:description" content="#CI框架的页面为何全是空白的 CI2点几版本的项目，所有页面都是返回200，不过页面都是空白的">
-<meta property="og:updated_time" content="2017-08-15T07:11:46.000Z">
+<meta property="og:description" content="CI框架的页面为何全是空白的CI2点几版本的项目，所有页面都是返回200，不过页面都是空白的">
+<meta property="og:updated_time" content="2017-08-15T07:13:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CI框架的页面为何全是空白的">
-<meta name="twitter:description" content="#CI框架的页面为何全是空白的 CI2点几版本的项目，所有页面都是返回200，不过页面都是空白的">
+<meta name="twitter:description" content="CI框架的页面为何全是空白的CI2点几版本的项目，所有页面都是返回200，不过页面都是空白的">
   
     <link rel="alternative" href="/atom.xml" title="Young" type="application/atom+xml">
   
@@ -168,8 +168,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#CI框架的页面为何全是空白的</p>
-<p>CI2点几版本的项目，所有页面都是返回200，不过页面都是空白的<br><a id="more"></a></p>
+        <h1 id="CI框架的页面为何全是空白的"><a href="#CI框架的页面为何全是空白的" class="headerlink" title="CI框架的页面为何全是空白的"></a>CI框架的页面为何全是空白的</h1><p>CI2点几版本的项目，所有页面都是返回200，不过页面都是空白的<br><a id="more"></a></p>
 <h2 id="第一步，开启所有的报错，包括框架的"><a href="#第一步，开启所有的报错，包括框架的" class="headerlink" title="第一步，开启所有的报错，包括框架的"></a>第一步，开启所有的报错，包括框架的</h2><p>发现没有错误，框架的log里没有。nginx，php的都没有。</p>
 <h2 id="第二步，定位到框架问题"><a href="#第二步，定位到框架问题" class="headerlink" title="第二步，定位到框架问题"></a>第二步，定位到框架问题</h2><p>搜索后得知，CI2 还在使用 php_mysql的模块<br>比如，所以我们没有看到报错<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function db_connect()</div><div class="line">	&#123;</div><div class="line">		if ($this-&gt;port != &apos;&apos;)</div><div class="line">		&#123;</div><div class="line">			$this-&gt;hostname .= &apos;:&apos;.$this-&gt;port;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		return @mysql_connect($this-&gt;hostname, $this-&gt;username, $this-&gt;password, TRUE);</div><div class="line">	&#125;</div></pre></td></tr></table></figure></p>
 <h2 id="得出结论"><a href="#得出结论" class="headerlink" title="得出结论"></a>得出结论</h2><p>因为我安装的php最低版本是php5.6的，brew安装的php5.6已经没有php56-mysql的拓展了，所以CI用不了，导致了悲剧。</p>
@@ -432,11 +431,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">心情</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+                <a href="javascript:void(0)" class="js-tag color3">心情</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -456,19 +455,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">服务器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vim</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">wechat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">服务器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
