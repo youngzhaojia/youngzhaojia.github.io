@@ -6,19 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://bolg.youngfly.top">
-  <title>markdown画流程图 | Young</title>
+  <title>Tag: restful | Young</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="markdown画流程图 一直在用markdown写东西，知道用markdown可以画出来很性感的流程图，遂决定学下如何用markdown来画流程图。">
-<meta name="keywords" content="markdown">
-<meta property="og:type" content="article">
-<meta property="og:title" content="markdown画流程图">
-<meta property="og:url" content="http://bolg.youngfly.top/2017/05/20/markdown画流程图/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Young">
+<meta property="og:url" content="http://bolg.youngfly.top/tags/restful/index.html">
 <meta property="og:site_name" content="Young">
-<meta property="og:description" content="markdown画流程图 一直在用markdown写东西，知道用markdown可以画出来很性感的流程图，遂决定学下如何用markdown来画流程图。">
-<meta property="og:updated_time" content="2017-08-04T02:16:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="markdown画流程图">
-<meta name="twitter:description" content="markdown画流程图 一直在用markdown写东西，知道用markdown可以画出来很性感的流程图，遂决定学下如何用markdown来画流程图。">
+<meta name="twitter:title" content="Young">
   
     <link rel="alternative" href="/atom.xml" title="Young" type="application/atom+xml">
   
@@ -148,201 +143,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-markdown画流程图" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      markdown画流程图
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2016/08/23/apidoc/" class="archive-article-date">
+  	<time datetime="2016-08-23T14:22:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-23</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/08/23/apidoc/">apidoc文档生成工具</a>
     </h1>
   
 
-        
-        <a href="/2017/05/20/markdown画流程图/" class="archive-article-date">
-  	<time datetime="2017-05-20T14:22:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="markdown画流程图"><a href="#markdown画流程图" class="headerlink" title="markdown画流程图"></a>markdown画流程图</h1><hr>
-<p>一直在用markdown写东西，知道用markdown可以画出来很性感的流程图，遂决定学下如何用markdown来画流程图。</p>
-<a id="more"></a>
-<h2 id="定义元素阶段的语法是"><a href="#定义元素阶段的语法是" class="headerlink" title="定义元素阶段的语法是"></a>定义元素阶段的语法是</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tag=&gt;type: content:&gt;url</div></pre></td></tr></table></figure>
-<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><ul>
-<li>tag 是流程图中的标签，在第二段连接元素时会用到。名称可以任意，一般为流程的英文缩写和数字的组合。</li>
-<li>type 用来确定标签的类型，=&gt;后面表示类型。由于标签的名称可以任意指定，所以要依赖type来确定标签的类型</li>
-<li>标签有6种类型：start end operation subroutine condition inputoutput</li>
-<li>content 是流程图文本框中的描述内容，: 后面表示内容，中英文均可。特别注意，冒号与文本之间一定要有个空格</li>
-<li>url是一个连接，与框框中的文本相绑定，:&gt;后面就是对应的 url 链接，点击文本时可以通过链接跳转到 url 指定页面</li>
-</ul>
-<h2 id="先来个简单例子"><a href="#先来个简单例子" class="headerlink" title="先来个简单例子"></a>先来个简单例子</h2><p>PS: 第一个 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line">```flow</div><div class="line">st=&gt;start: Start</div><div class="line">op=&gt;operation: Your Operation</div><div class="line">cond=&gt;condition: Yes or No?</div><div class="line">e=&gt;end</div><div class="line">st-&gt;op-&gt;cond</div><div class="line">cond(yes)-&gt;e</div><div class="line">cond(no)-&gt;op</div></pre></td></tr></table></figure></p>
-<h3 id="如图"><a href="#如图" class="headerlink" title="如图"></a>如图</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">st=&gt;start: Start</div><div class="line">op=&gt;operation: Your Operation</div><div class="line">cond=&gt;condition: Yes or No?</div><div class="line">e=&gt;end</div><div class="line">st-&gt;op-&gt;cond</div><div class="line">cond(yes)-&gt;e</div><div class="line">cond(no)-&gt;op</div></pre></td></tr></table></figure>
-<h2 id="再来个自己刚写的"><a href="#再来个自己刚写的" class="headerlink" title="再来个自己刚写的"></a>再来个自己刚写的</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">```flow</div><div class="line">st=&gt;start: return_list页面</div><div class="line">e=&gt;end: End</div><div class="line">op1=&gt;operation: input页面</div><div class="line">op2=&gt;operation: detail页面</div><div class="line">op3=&gt;operation: 详情修改</div><div class="line">op4=&gt;operation: 审核通过</div><div class="line">op5=&gt;operation: 退货单出库</div><div class="line">op6=&gt;operation: 库存数量减少</div><div class="line">cond1=&gt;condition: 新增 or 详情</div><div class="line"></div><div class="line">st-&gt;cond1-&gt;op1</div><div class="line">op2-&gt;op3</div><div class="line">op3-&gt;op4</div><div class="line">op4-&gt;op5</div><div class="line">op5-&gt;op6</div><div class="line">cond1(yes)-&gt;op1</div><div class="line">cond1(no)-&gt;op2-&gt;op3</div></pre></td></tr></table></figure>
-<h3 id="如图-1"><a href="#如图-1" class="headerlink" title="如图"></a>如图</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">st=&gt;start: return_list页面</div><div class="line">e=&gt;end: End</div><div class="line">op1=&gt;operation: input页面</div><div class="line">op2=&gt;operation: detail页面</div><div class="line">op3=&gt;operation: 详情修改</div><div class="line">op4=&gt;operation: 审核通过</div><div class="line">op5=&gt;operation: 退货单出库</div><div class="line">op6=&gt;operation: 库存数量减少</div><div class="line">cond1=&gt;condition: 新增 or 详情</div><div class="line"></div><div class="line">st-&gt;cond1-&gt;op1</div><div class="line">op2-&gt;op3</div><div class="line">op3-&gt;op4</div><div class="line">op4-&gt;op5</div><div class="line">op5-&gt;op6</div><div class="line">cond1(yes)-&gt;op1</div><div class="line">cond1(no)-&gt;op2-&gt;op3</div></pre></td></tr></table></figure>
-<h2 id="最后来个网上找的，供参考"><a href="#最后来个网上找的，供参考" class="headerlink" title="最后来个网上找的，供参考"></a>最后来个网上找的，供参考</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">```flow</div><div class="line">st=&gt;start: Start|past:&gt;http://www.google.com[blank]</div><div class="line">e=&gt;end: End:&gt;http://www.google.com</div><div class="line">op1=&gt;operation: get_hotel_ids|past</div><div class="line">op2=&gt;operation: get_proxy|current</div><div class="line">sub1=&gt;subroutine: get_proxy|current</div><div class="line">op3=&gt;operation: save_comment|current</div><div class="line">op4=&gt;operation: set_sentiment|current</div><div class="line">op5=&gt;operation: set_record|current</div><div class="line"></div><div class="line">cond1=&gt;condition: ids_remain空?</div><div class="line">cond2=&gt;condition: proxy_list空?</div><div class="line">cond3=&gt;condition: ids_got空?</div><div class="line">cond4=&gt;condition: 爬取成功??</div><div class="line">cond5=&gt;condition: ids_remain空?</div><div class="line"></div><div class="line">io1=&gt;inputoutput: ids-remain</div><div class="line">io2=&gt;inputoutput: proxy_list</div><div class="line">io3=&gt;inputoutput: ids-got</div><div class="line"></div><div class="line">st-&gt;op1(right)-&gt;io1-&gt;cond1</div><div class="line">cond1(yes)-&gt;sub1-&gt;io2-&gt;cond2</div><div class="line">cond2(no)-&gt;op3</div><div class="line">cond2(yes)-&gt;sub1</div><div class="line">cond1(no)-&gt;op3-&gt;cond4</div><div class="line">cond4(yes)-&gt;io3-&gt;cond3</div><div class="line">cond4(no)-&gt;io1</div><div class="line">cond3(no)-&gt;op4</div><div class="line">cond3(yes, right)-&gt;cond5</div><div class="line">cond5(yes)-&gt;op5</div><div class="line">cond5(no)-&gt;cond3</div><div class="line">op5-&gt;e</div></pre></td></tr></table></figure>
-<h3 id="如图-2"><a href="#如图-2" class="headerlink" title="如图"></a>如图</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">st=&gt;start: Start|past:&gt;http://www.google.com[blank]</div><div class="line">e=&gt;end: End:&gt;http://www.google.com</div><div class="line">op1=&gt;operation: get_hotel_ids|past</div><div class="line">op2=&gt;operation: get_proxy|current</div><div class="line">sub1=&gt;subroutine: get_proxy|current</div><div class="line">op3=&gt;operation: save_comment|current</div><div class="line">op4=&gt;operation: set_sentiment|current</div><div class="line">op5=&gt;operation: set_record|current</div><div class="line"></div><div class="line">cond1=&gt;condition: ids_remain空?</div><div class="line">cond2=&gt;condition: proxy_list空?</div><div class="line">cond3=&gt;condition: ids_got空?</div><div class="line">cond4=&gt;condition: 爬取成功??</div><div class="line">cond5=&gt;condition: ids_remain空?</div><div class="line"></div><div class="line">io1=&gt;inputoutput: ids-remain</div><div class="line">io2=&gt;inputoutput: proxy_list</div><div class="line">io3=&gt;inputoutput: ids-got</div><div class="line"></div><div class="line">st-&gt;op1(right)-&gt;io1-&gt;cond1</div><div class="line">cond1(yes)-&gt;sub1-&gt;io2-&gt;cond2</div><div class="line">cond2(no)-&gt;op3</div><div class="line">cond2(yes)-&gt;sub1</div><div class="line">cond1(no)-&gt;op3-&gt;cond4</div><div class="line">cond4(yes)-&gt;io3-&gt;cond3</div><div class="line">cond4(no)-&gt;io1</div><div class="line">cond3(no)-&gt;op4</div><div class="line">cond3(yes, right)-&gt;cond5</div><div class="line">cond5(yes)-&gt;op5</div><div class="line">cond5(no)-&gt;cond3</div><div class="line">op5-&gt;e</div></pre></td></tr></table></figure>
-<p>未完待续,转载请注明原地址，Zhao Jia 的博客：<a href="http://blog.youngfly.top" target="_blank" rel="external">http://blog.youngfly.top</a> 谢谢！</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="https://raw.githubusercontent.com/youngzhaojia/youngzhaojia.github.io/master/photo/avatar/alipay.png">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="https://raw.githubusercontent.com/youngzhaojia/youngzhaojia.github.io/master/photo/avatar/weixin.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">restful</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://bolg.youngfly.top/2017/05/20/markdown画流程图/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/07/05/简单索引技巧/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          简单索引技巧
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/02/08/typecho-plugin/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">typecho plugin</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
+    
 
 
           </div>
@@ -365,9 +219,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: false,
