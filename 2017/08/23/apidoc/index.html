@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Young">
 <meta property="og:description" content="apidoc文档生成工具 https://github.com/apidoc/apidoc 安装1cnpm install apidoc -g">
 <meta property="og:image" content="https://raw.githubusercontent.com/youngzhaojia/youngzhaojia.github.io/master/photo/blog/apidoc/login.png">
-<meta property="og:updated_time" content="2017-08-31T07:02:22.000Z">
+<meta property="og:updated_time" content="2017-09-01T01:30:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="apidoc文档生成工具">
 <meta name="twitter:description" content="apidoc文档生成工具 https://github.com/apidoc/apidoc 安装1cnpm install apidoc -g">
@@ -187,6 +187,7 @@
 <p><img src="https://raw.githubusercontent.com/youngzhaojia/youngzhaojia.github.io/master/photo/blog/apidoc/login.png" alt="如图"></p>
 <h2 id="代码注释"><a href="#代码注释" class="headerlink" title="代码注释"></a>代码注释</h2><p>更多可查看官网</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">@api &#123;method&#125; path [title]</div><div class="line">  只有使用@api标注的注释块才会在解析之后生成文档，title会被解析为导航菜单(@apiGroup)下的小菜单</div><div class="line">  method可以有空格，如&#123;POST GET&#125;</div><div class="line">@apiGroup name</div><div class="line">  分组名称，被解析为导航栏菜单</div><div class="line">@apiName name</div><div class="line">  接口名称，在同一个@apiGroup下，名称相同的@api通过@apiVersion区分，否者后面@api会覆盖前面定义的@api</div><div class="line">@apiDescription text</div><div class="line">  接口描述，支持html语法</div><div class="line">@apiVersion verison</div><div class="line">  接口版本，major.minor.patch的形式</div><div class="line"></div><div class="line">@apiIgnore [hint]</div><div class="line">  apidoc会忽略使用@apiIgnore标注的接口，hint为描述</div><div class="line">@apiSampleRequest url</div><div class="line">  接口测试地址以供测试，发送请求时，@api method必须为POST/GET等其中一种</div><div class="line"></div><div class="line">@apiDefine name [title] [description]</div><div class="line">  定义一个注释块(不包含@api)，配合@apiUse使用可以引入注释块</div><div class="line">  在@apiDefine内部不可以使用@apiUse</div><div class="line">@apiUse name</div><div class="line">  引入一个@apiDefine的注释块</div><div class="line"></div><div class="line">@apiParam [(group)] [&#123;type&#125;] [field=defaultValue] [description]</div><div class="line">@apiHeader [(group)] [&#123;type&#125;] [field=defaultValue] [description]</div><div class="line">@apiError [(group)] [&#123;type&#125;] field [description]</div><div class="line">@apiSuccess [(group)] [&#123;type&#125;] field [description]</div><div class="line">  用法基本类似，分别描述请求参数、头部，响应错误和成功</div><div class="line">  group表示参数的分组，type表示类型(不能有空格)，入参可以定义默认值(不能有空格)</div><div class="line">@apiParamExample [&#123;type&#125;] [title] example</div><div class="line">@apiHeaderExample [&#123;type&#125;] [title] example</div><div class="line">@apiErrorExample [&#123;type&#125;] [title] example</div><div class="line">@apiSuccessExample [&#123;type&#125;] [title] example</div><div class="line">  用法完全一致，但是type表示的是example的语言类型</div><div class="line">  example书写成什么样就会解析成什么样，所以最好是书写的时候注意格式化，(许多编辑器都有列模式，可以使用列模式快速对代码添加*号)</div><div class="line"></div><div class="line">@apiPermission name</div><div class="line">  name必须独一无二，描述@api的访问权限，如admin/anyone</div></pre></td></tr></table></figure>
+<p>未完待续,转载请注明原地址，Zhao Jia 的博客：<a href="http://blog.youngfly.top" target="_blank" rel="external">http://blog.youngfly.top</a> 谢谢！</p>
 
       
 
@@ -427,23 +428,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">PHP</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">心情</a>
+                <a href="javascript:void(0)" class="js-tag color3">CI</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -451,11 +440,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">redis</a>
+                <a href="javascript:void(0)" class="js-tag color3">心情</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">typecho</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">redis</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -463,11 +460,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vim</a>
+                <a href="javascript:void(0)" class="js-tag color3">typecho</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">wechat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vim</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">索引</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -476,10 +481,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">索引</a>
               </li>
             
             <div class="clearfix"></div>
